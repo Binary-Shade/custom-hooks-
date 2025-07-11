@@ -17,29 +17,12 @@ A collection of reusable, well-typed custom React hooks to supercharge your deve
 ## 📦 Installation
 
 ```bash
-npm install @yourusername/react-hooks-collection
+npm install @Binary-Shade/react-hooks-collection
 # or
-yarn add @yourusername/react-hooks-collection
+yarn add @Binary-Shade/react-hooks-collection
 ```
 
 ## 🔧 Available Hooks
-
-### 🔐 `useAuth()`
-Complete authentication solution with Firebase/Firestore integration.
-
-```typescript
-const {
-  currentUser,    // { auth: User | null, profile: UserProfile | null }
-  loading,        // boolean
-  isAuthenticated,// boolean
-  signUp,         // (email: string, password: string, fullName?: string) => Promise<AuthResult>
-  signIn,         // (email: string, password: string) => Promise<AuthResult>
-  logOut,         // () => Promise<AuthResult>
-  verifyAuth,     // () => boolean
-  getToken,       // () => Promise<string | null>
-  updateUserProfile // (data: Partial<UserProfile>) => Promise<AuthResult>
-} = useAuth();
-```
 
 ### ⏰ `useTimeOfDay()`
 Detects morning/afternoon/evening/night based on current time.
@@ -57,28 +40,6 @@ const timeOfDay = useTimeOfDay({
 ```
 
 ## 🛠 Usage Examples
-
-### Authentication Flow Example
-```typescript
-import { useAuth } from '@yourusername/react-hooks-collection';
-
-function LoginPage() {
-  const { signIn, loading } = useAuth();
-
-  const handleLogin = async (email: string, password: string) => {
-    const result = await signIn(email, password);
-    if (!result.success) {
-      alert(result.error);
-    }
-  };
-
-  return (
-    <button onClick={() => handleLogin('test@example.com', 'password')} disabled={loading}>
-      {loading ? 'Loading...' : 'Login'}
-    </button>
-  );
-}
-```
 
 ### Time-Based Greeting Example
 ```typescript
@@ -98,27 +59,6 @@ function Greeting() {
 }
 ```
 
-## 🔄 Real-time Updates
-
-All hooks are designed to handle real-time updates automatically:
-
-```typescript
-function Profile() {
-  const { currentUser } = useAuth();
-  
-  // Will re-render when profile changes in Firestore
-  return <div>{currentUser.profile?.fullName}</div>;
-}
-```
-
-## 🛡️ Security
-
-The authentication hooks include built-in security patterns:
-- JWT token management
-- Secure Firestore rules templates
-- Protected route components
-- Auth state persistence
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -134,7 +74,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📬 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
+Your Name - [@sureshk](02042003sureshk@gmail.com)
 
 Project Link: [https://github.com/yourusername/react-hooks-collection](https://github.com/yourusername/react-hooks-collection)
 
