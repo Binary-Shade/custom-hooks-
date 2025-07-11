@@ -14,14 +14,6 @@ A collection of reusable, well-typed custom React hooks to supercharge your deve
 - **Real-time Updates**: Built-in subscription patterns
 - **Customizable**: Adaptable to your specific needs
 
-## 📦 Installation
-
-```bash
-npm install @Binary-Shade/react-hooks-collection
-# or
-yarn add @Binary-Shade/react-hooks-collection
-```
-
 ## 🔧 Available Hooks
 
 ### ⏰ `useTimeOfDay()`
